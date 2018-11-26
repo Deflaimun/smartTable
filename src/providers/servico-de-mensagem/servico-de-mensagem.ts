@@ -12,17 +12,32 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ServicoDeMensagemProvider {
 
-  private url: string = "http://localhost:8080/teste";
+  private url: string = `http://localhost:8080/`;
 
   constructor(private  http: Http) {
     console.log('Hello ServicoDeMensagemProvider Provider');
   }
 
-  getMessages(){
-    return this.http.get(this.url)
+  // getMessages(){
+  //   return this.http.get(this.url)
     
-    .map((res: Response) => res.json())
+  //   .map((res) => res.json())
 
+  // }
+
+  // makeRequest(request,nomeParam, param,nomeParam2,idCliente){
+  //   return this.http.get(this.url+request+"?"+nomeParam+"="+param+"&" +nomeParam2 + "=" +idCliente)
+  //   .do((res) => res.json())
+  // }
+
+  doTest(){
+    return this.http.get(this.url+"teste")
+    .do((res: Response) => console.log(res))
+
+    
   }
+
+
+  
 
 }

@@ -8,20 +8,24 @@
 
 <ion-content padding>
 
-  <button ion-button (click)="getMessages()">Entrar</button>
-
-  <div>
+  <p> Seja bem-vindo. Selecione quantas pessoas entrarão no restaurante com você</p>
+  
+<div>
     <ion-item>
-    <ion-label>Quantidade de pessoas</ion-label>
-    <ion-select [(ngModel)]="mes" interface="action-sheet">
+      <ion-label>Quantidade de pessoas</ion-label>
+      <ion-select [(ngModel)]="qtd" interface="action-sheet">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="4">4</ion-option>
       <ion-option value="10">10</ion-option>
     </ion-select>
   </ion-item>
-  </div>
+</div>
+
+<button ion-button (click)="entrar()">Entrar</button>
 
   <button ion-button (click)="getValue()">Ver valor</button>
+
+  <button ion-button (click)="doTest()">Test</button>
 
 </ion-content>
