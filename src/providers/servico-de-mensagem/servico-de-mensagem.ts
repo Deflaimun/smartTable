@@ -25,10 +25,9 @@ export class ServicoDeMensagemProvider {
 
   // }
 
-  // makeRequest(request,nomeParam, param,nomeParam2,idCliente){
-  //   return this.http.get(this.url+request+"?"+nomeParam+"="+param+"&" +nomeParam2 + "=" +idCliente)
-  //   .do((res) => res.json())
-  // }
+   makeRequest(request,nomeParam, param,nomeParam2,idCliente){
+     return this.http.get(this.url+request+"?"+nomeParam+"="+param+"&" +nomeParam2 + "=" +idCliente)
+}
 
   doTest(){
     return this.http.get(this.url+"teste")

@@ -15,7 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CodigoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  resposta: any;
+  codigo: string;
+
+  constructor(private navCtrl: NavController, private navParams: NavParams) {
+    this.resposta = this.navParams.data;
+    this.codigo = this.resposta.codigo;
   }
 
   ionViewDidLoad() {

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
 /**
  * Generated class for the FilaPage page.
  *
@@ -15,7 +16,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FilaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  resposta: any;
+  qnt: number;
+
+  constructor(private navCtrl: NavController, private navParams: NavParams) {
+    this.resposta = this.navParams.data;
+    this.qnt = this.resposta.qtdMesasAFrente;
+    
+    
+    
   }
 
   ionViewDidLoad() {
